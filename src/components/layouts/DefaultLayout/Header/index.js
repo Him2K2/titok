@@ -1,7 +1,16 @@
+import classNames from "classnames/bind";
+import styles from "./Header.module.scss"
+
+const cx = classNames.bind(styles);
+
+
 function Header() {
-    return ( 
-        <h1>Headerfdfdf</h1>
-     );
+    return <header className={cx("wrapper")}>
+        <div className={cx("inner")}>
+        fhsdjfj
+
+        </div>
+    </header>
 }
 
 export default Header;
