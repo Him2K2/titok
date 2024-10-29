@@ -4,6 +4,9 @@
 :root{
   
     --primary:#ff5370;
+    --black:rgb(18,18,18);
+    --text-color:rgb(232,232,232);
+   
 }
 
 *{
@@ -24,4 +27,12 @@ body{
   line-height: 1.5;
   text-rendering: optimizeSpeed;
 
+}button,input,[tabindex]{
+    outline: none;
+    border: none;
 }
+a[href]{
+    color:var(--text-color)
+    
+}
+
