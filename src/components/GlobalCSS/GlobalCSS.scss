@@ -3,7 +3,7 @@
 
 :root{
   
-    --primary:#ff5370;
+    --primary:rgb(243,63,93,1);
     --black:rgb(18,18,18);
     --text-color:rgb(232,232,232);
    
@@ -21,6 +21,7 @@ html{
 }
 
 body{
+  background-color: black;
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-size: 1.6rem;

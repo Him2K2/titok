@@ -8,9 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleXmark,
   faMagnifyingGlass,
+  faRightToBracket,
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import { Wrapper as PopperWrapper } from "../../../Popper";
+import AccountItem from "../../../AccountItem";
+import Button from "../../../Button";
 
 
 const cx = classNames.bind(styles);
@@ -39,6 +42,10 @@ function Header() {
               <PopperWrapper>
                 result
                 <h5 className={cx("search-title")}>Accounts</h5>
+                <AccountItem></AccountItem>
+                <AccountItem></AccountItem>
+                <AccountItem></AccountItem>
+                
               </PopperWrapper>
               </div>
           )}
@@ -58,7 +65,10 @@ function Header() {
             </button>
           </div>
         </Tippy>
-        <div className={cx("action")}></div>
+        <div className={cx("actions")}>
+          <Button text >UpLoad</Button>
+          <Button primary  rightIcon={<FontAwesomeIcon icon={faRightToBracket} />} >Login</Button>
+        </div>
       </div>
     </header>
   );
