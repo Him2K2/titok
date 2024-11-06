@@ -3,11 +3,12 @@
     align-items: center;
     padding: 9px 16px;
     cursor: pointer;
-    background-color: #746e6e6d;
+    background-color: rgba(59, 59, 59, 0.947);
     
     &:hover{
         background-color: #cfcece14;
     }
+    border-radius: 10px;
 
 
 }
