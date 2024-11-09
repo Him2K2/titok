@@ -24,20 +24,31 @@ const cx = classNames.bind(styles);
 
 const Menu_Items = [
   {
-    icon:<FontAwesomeIcon icon={faLanguage}></FontAwesomeIcon>,
-    title:"EngLish",
-    
+    icon: <FontAwesomeIcon icon={faLanguage}></FontAwesomeIcon>,
+    title: "English",
+    children: {
+      title: "Language",
+      data: [
+        {
+          code: "vn",
+          title: "Tiếng Việt",
+        },
+        {
+          code: "en",
+          title: "EngLish",
+        },
+      ],
+    },
   },
   {
-    icon:<FontAwesomeIcon icon={faQuestion}></FontAwesomeIcon>,
-    title:"FeedBack and Help",
-    to:"/keyboard",
+    icon: <FontAwesomeIcon icon={faQuestion}></FontAwesomeIcon>,
+    title: "Feedback and help",
+    to: "/keyboard",
   },
   {
-    icon:<FontAwesomeIcon icon={faKeyboard}></FontAwesomeIcon>,
-    title:"KeyBoard ShortCuts"
+    icon: <FontAwesomeIcon icon={faKeyboard}></FontAwesomeIcon>,
+    title: "Keyboard shortcuts",
   },
-  
 ];
 
 function Header() {
@@ -58,7 +69,6 @@ function Header() {
 
         <Tippy
           interactive
-          visible
           render={(attrs) => (
             <div className={cx("search-result")} tabIndex="-1" {...attrs}>
               <PopperWrapper>
@@ -67,7 +77,6 @@ function Header() {
                 <AccountItem></AccountItem>
                 <AccountItem></AccountItem>
                 <AccountItem></AccountItem>
-                
               </PopperWrapper>
             </div>
           )}
@@ -95,10 +104,7 @@ function Header() {
           >
             Login
           </Button>
-          <Menu items={Menu_Items}
-          
-          >
-
+          <Menu items={Menu_Items}>
             <button className={cx("more-btn")}>
               <FontAwesomeIcon icon={faEllipsisVertical} />
             </button>

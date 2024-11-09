@@ -20,6 +20,7 @@
            text-decoration: none;
            font-size: 15px;
            border-radius: 0px;
+           line-height: 1.8rem;
            &:hover{
             background-color: rgba(33, 33, 33, 0.627);
             cursor: pointer;
@@ -27,4 +28,28 @@
           
         }
 }
-//menu items
+
+.header{
+    position: relative;
+    height: 50px;
+    margin-top: -8px;
+}
+.back-btn{
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    color: azure;
+    &:hover{
+        background-color: rgba(33, 33, 33, 0.627);
+    }
+
+}
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+
+}
