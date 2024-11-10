@@ -72,6 +72,8 @@
 .actions{
 
     background-color: #0000;
+    display: flex;
+    align-items: center;
 }
 .clear{
     position: absolute;
@@ -118,5 +120,48 @@
     padding: 10px;
 
 }
+.current-user{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.upload-btn{
+    display: inline-flex;
+    color: #ffffff;
 
-//menu
+    min-width: 100px;
+    padding: 9px 16px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 4px;
+    background-color: rgb(39, 39, 39);
+    border: 1px solid transparent;
+    user-select: none;
+    cursor: pointer;
+    
+
+    &:hover{
+        background-color: #4b4b4bbd;
+    }
+
+}
+.i-mess{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 24px;
+    color: #e8e8e8;
+    background-color: #000;
+    &:hover{
+        cursor: pointer;
+       
+    }
+
+
+}
+.avata-user{
+
+    width: 11%;
+    height: auto;
+    
+    border-radius: 99px;
+}
