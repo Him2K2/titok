@@ -21,8 +21,13 @@
            font-size: 15px;
            border-radius: 0px;
            line-height: 1.8rem;
+           &.separate{
+            border-top: 1px solid rgba(226, 222, 222, 0.493);
+
+           }
+
            &:hover{
-            background-color: rgba(33, 33, 33, 0.627);
+            background-color: rgb(33, 33, 33);
             cursor: pointer;
            }
           
