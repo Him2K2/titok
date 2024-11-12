@@ -7,7 +7,7 @@ import UpLoad from "../pages/Upload";
 const publicRoutes = [
     {path:"/",component:Home},
     {path:"/following",component:Follwing},
-    {path:"/profile",component:Profile},
+    {path:"/@:nickname",component:Profile},
     {path:"/upload",component:UpLoad,layout:1}
 
 ];
