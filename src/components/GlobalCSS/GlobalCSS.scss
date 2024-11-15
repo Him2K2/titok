@@ -6,6 +6,7 @@
     --primary:rgb(243,63,93,1);
     --black:rgb(18,18,18);
     --text-color:#fff;
+    --header-height:60px;
    
 }
 
@@ -19,21 +20,53 @@ html{
     font-size: 62.5%;
 
 }
+//scrollbar css
+html ::-webkit-scrollbar {
+    border-radius: 0px;
+    width: 8px;
+}
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.43);
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.319);
+}
+
+html ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
 
 body{
+
   background-color: black;
+  color: #ffffff;
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  overflow-y: overlay;
+
 
 }button,input,[tabindex]{
     outline: none;
     border: none;
 }
 a[href]{
-    color:var(--text-color)
+    color:var(--text-color);
+    text-decoration: none;
     
 }
 

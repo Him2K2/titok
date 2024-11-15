@@ -1,7 +1,7 @@
-function Follwing() {
+function Following() {
     return ( 
-        <h2>Follwing</h2>
+        <h2>Following</h2>
      );
 }
 
-export default Follwing;
+export default Following;

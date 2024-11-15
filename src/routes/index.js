@@ -1,14 +1,18 @@
 import Home from "../pages/Home";
-import Follwing from "../pages/Following";
+import Following from "../pages/Following";
 import Profile from "../pages/Profile";
 import UpLoad from "../pages/Upload";
+import Live from "../pages/Live";
+
+import routes from "../config/routes";
 
 //PublicRoutes
 const publicRoutes = [
-    {path:"/",component:Home},
-    {path:"/following",component:Follwing},
-    {path:"/@:nickname",component:Profile},
-    {path:"/upload",component:UpLoad,layout:1}
+    {path:routes.home,component:Home},
+    {path:routes.follwing,component:Following},
+    {path:routes.profile,component:Profile},
+    {path:routes.live,component:Live},
+    {path:routes.upload,component:UpLoad,layout:1}
 
 ];
 

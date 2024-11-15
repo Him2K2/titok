@@ -4,11 +4,24 @@
     align-items: center;
 }
 .container{
-    width: 1150px;
+    margin-top:var( --header-height);
+    width:100vw;
     display: flex;
+    flex-direction:row;
+    justify-content:start;
+  
+
     
 }
+.sidebar{
+    display: flex;
+    max-width: 100%;
+}
+
 .content{
-    flex: 1;
+   flex-grow: 1;
+   display: flex;
+   justify-content: center;
+   min-width: 500px;
     
 }

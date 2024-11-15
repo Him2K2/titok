@@ -9,44 +9,49 @@ import { useState } from "react";
 
 const cx = classNames.bind(styles);
 
-function Menu({ children, items = [] }) {
-  
+function Menu({ children, items = [], hideOnClick = false }) {
+  const [history, setHistory] = useState([{ data: items }]);
+  const current = history[history.length - 1];
 
-  const [history,setHistory] = useState([{data:items}]);
-  const current = history[history.length-1];
-
-  const callBack = ()=>{
-    setHistory(prev=>prev.slice(0, prev.length -1 ))
-  }
+  const callBack = () => {
+    setHistory((prev) => prev.slice(0, prev.length - 1));
+  };
 
   const renderItems = () => {
     return current.data.map((i, index) => {
-
       const isParent = !!i.children;
-      return <Menu_Items key={index} data={i} onClick={()=>{
-        if(isParent){
-          setHistory(prev =>[...prev, i.children])
-        }
-      }}></Menu_Items>
+      return (
+        <Menu_Items
+          key={index}
+          data={i}
+          onClick={() => {
+            if (isParent) {
+              setHistory((prev) => [...prev, i.children]);
+            }
+          }}
+        ></Menu_Items>
+      );
     });
   };
   return (
     <Tippy
+    
+      hideOnClick={hideOnClick}
       delay={[0, 700]}
       interactive
       placement="bottom-end"
       render={(attrs) => (
         <div className={cx("menu-items")} tabIndex="-1" {...attrs}>
           <PopperWrapper>
+            {history.length > 1 && (
+              <Language onBack={callBack} title={current.title}></Language>
+            )}
 
-            {history.length>1 && <Language onBack={callBack} title="Language"></Language>}
-
-            {renderItems()}
-          
+            <div className={cx("menu-language")}>{renderItems()}</div>
           </PopperWrapper>
         </div>
       )}
-       onHide={()=>setHistory((prev)=>prev.slice(0,1))}
+      onHide={() => setHistory((prev) => prev.slice(0, 1))}
     >
       {children}
     </Tippy>

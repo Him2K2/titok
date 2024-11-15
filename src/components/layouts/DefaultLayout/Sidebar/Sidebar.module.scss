@@ -1,4 +1,11 @@
 .wrapper{
     width: 356px;
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    max-width: 224px;
+    justify-content: flex-start;
+    padding: 20px 0px 26px 8px;
+
+    min-height: 100%;
+
 }
