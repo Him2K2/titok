@@ -1,0 +1,56 @@
+.preview{
+    padding: 20px;
+    width: 300px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.avatar{
+
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+   
+}
+.body{
+
+    background-color: transparent;
+
+}
+.nickname{
+
+    display: flex;
+    align-items: center;
+
+}
+.icon{
+    color: aqua;
+    padding-left: 10px;
+    font-size: 1.4rem;
+
+}
+.name{
+  font-size: 1.2rem;
+
+}
+.analytics{
+
+    display: flex;
+    flex-direction: row;
+}
+.valuefl{
+
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    padding-right: 20px;
+}
+.valuelike{
+    font-weight: bold;
+    color: white;
+}
+
